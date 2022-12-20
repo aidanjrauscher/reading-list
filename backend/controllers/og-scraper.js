@@ -1,5 +1,7 @@
 const ogs = require('open-graph-scraper')
 
+//do something with imageURL
+
 const scrapeURL = async (req,res)=>{
     const { providedURL }  = req.body
     if(!providedURL){
