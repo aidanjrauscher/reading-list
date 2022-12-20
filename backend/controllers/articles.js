@@ -2,6 +2,8 @@ const prisma = require("../utils/prismaClient")
 
 const getArticles = async (req,res)=>{
     try{
+        const {favorite, read} = req.query
+        console.log(favorite)
         const articles = await prisma.article.findMany()
         res.status(200)
         res.json(articles)
@@ -42,7 +44,8 @@ const getSingleArticle = async (req,res)=>{
 
 const updateArticle = async(req,res)=>{}
 
-const addArticle = async (req,res)=>{}
+const addArticle = async (req,res)=>{
+}
 
 const deleteArticle = async (req,res)=>{}
 
